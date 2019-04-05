@@ -6,11 +6,13 @@
 #define SUDOKU_BOARD_H
 
 #include "Box.h"
+#include "Region.h"
 
 class Board {
 
 private:
     Box* gameBoard[9][9];
+    Region* regionTab[3][3];
 
     /**
      * Private method witch initialize the gameBord array by putting in boxes objects
@@ -21,7 +23,7 @@ private:
      * Private method called to make a list of Regions which contains pointers to
      * boxes witch are located on this region.
      */
-    void regionsInit() const;
+    void regionsInit();
 
 public:
 
